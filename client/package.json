@@ -29,24 +29,12 @@
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "start": "react-scripts start",
     "test": "react-scripts test --verbose --transformIgnorePatterns \"node_modules/(?!@codemirror)/\" --coverage",
-    "prepare": "cd ../ && husky install ./client/.husky",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "prepare": "cd ../ && husky install ./client/.husky"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
     ]
   },
   "license": "MIT",
